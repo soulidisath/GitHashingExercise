@@ -1,0 +1,9 @@
+#!/bin/bash
+
+digits=$1
+
+hash=$(echo -n $digits | sha256sum | awk '{print $1}')
+
+echo $hash > hash_output.txt
+
+echo $hash
